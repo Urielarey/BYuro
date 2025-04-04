@@ -7,157 +7,121 @@
     padding: 0;
     margin: 0;
 }
-nav{
+nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 100%;
 }
-nav ul{
+nav ul {
     list-style: none;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
-nav li{
-    padding: 1.25rem 3rem 1.25rem 2rem;
+nav li {
+    padding: 1.25rem 2rem;
 }
-a{
-    text-decoration: none;
+a {
     text-decoration: none;
     color: #522A27; 
     transition: transform 0.2s ease-in-out;
     display: inline-block;
 }
-.nav a:hover {
+a:hover {
     transform: scale(1.1);
     color: #C97064;
 }
-.logo{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-article h2{
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.25rem;
+    justify-items: center;
     text-align: center;
-    letter-spacing: 5px;
-    color: #522A27;
 }
-article p{
-    text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.img{
+.logo img {
+    width: 31.25rem;
     display: flex;
+}
+p{
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Lo centra en la pantalla */
+    text-align: center; /* Mantiene el texto alineado al centro */
+    padding: 20px; /* Agrega un poco de espacio alrededor */
+}
+h2{
+    padding: 20px;
+}
+.img {
+    display: flex;
+    gap: 1.25rem;
     justify-content: center;
 }
-.imghtml{
-    width: 500px;
+.imghtml, .imgcss {
+    width: 30rem;
+    padding-top: 2rem;
+}
+/* Contenedor principal centrado */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Todo en una columna */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alineación vertical */
+    text-align: center; /* Centra el texto */
+    max-width: 800px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 20px;
+}
+
+/* Ajuste para los elementos de la lista */
+.grid-container ul {
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0;
+}
+
+.grid-container li {
+    display: grid;
+    grid-template-rows: auto auto; /* Primera fila para el <strong>, segunda para el texto */
+    gap: 5px; /* Espacio entre el <strong> y el texto */
+    margin-bottom: 15px; /* Espacio entre cada elemento */
+}
+
+/* Hace que el <strong> esté arriba */
+.grid-container li strong {
+    font-size: 1.2rem; /* Tamaño más grande */
+    font-weight: bold;
+}
+.logo {
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+    height: 150px; /* Ajusta según necesidad */
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo */
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Contenedor de imágenes */
+.footer-images {
+    display: flex; /* Cambiado a flexbox para asegurar que estén en la misma fila */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre imágenes */
+    align-items: center; /* Alinea verticalmente */
+}
+
+/* Estilo de imágenes */
+.footer-images img {
+    width: 100px; /* Ajusta el tamaño */
     height: auto;
-    padding-right: 10px;
-}
-.imgcss {
-    width: 500px;
-    height: auto;
-}
-footer{
-    width: 100%;
-    transform: scale(0.3);
-    mix-blend-mode: multiply;
-}
-.footer a{
-    text-decoration: none;
-    color: #522A27;
-    transition: transform 0.2s ease-in-out;
-    display: inline-block;
-}
-.footer a:hover {
-    transform: scale(1.1);
-    color: #C97064;
-}
-.pie{
-    mix-blend-mode: multiply;
-    padding-right: 450px;
-}
-.img{
-    padding-top: 50px;
-}
-@media (max-width : 40rem){ 
-    .img{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .imghtml{
-        max-width: 15rem;
-        padding: 1.25rem;
-    }
-    .imgcss{
-        max-width: 15rem;
-        padding: 1.25rem;
-    }
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    
-    /* Checkbox oculto */
-    #menu-toggle {
-        display: none;
-    }
-    
-    /* Botón hamburguesa */
-    .menu-btn {
-        font-size: 30px;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background: none;
-        border: none;
-        color: black;
-    }
-    
-    /* Menú oculto por defecto */
-    .menu {
-        background: #222;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 200px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-    
-    /* Mostrar menú cuando el checkbox está activado */
-    #menu-toggle:checked + .menu-btn + .menu {
-        max-height: 200px; /* Ajusta según el contenido */
-    }
-    
-    /* Estilo de la lista */
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .menu li {
-        border-bottom: 1px solid #444;
-    }
-    
-    .menu a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-    }
-    
-    .menu a:hover {
-        background: #444;
-    }
 }
