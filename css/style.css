@@ -34,6 +34,9 @@ padding: 1.25rem;
     max-height: 21.875rem;
     object-fit: cover;
 }
+footer{
+    padding: 18.75rem;
+}
 .footer {
     display: flex;
     flex-direction: column;
@@ -49,6 +52,7 @@ padding: 1.25rem;
     align-items: center;
 }
 .footer-images img {
+    padding-top: 15rem;
     width: 3.75rem;
     height: auto;
 }
@@ -117,7 +121,6 @@ input,textarea {
     transition: transform 0.2s ease-in-out;
     display: flex;
     justify-content: center;
-    padding-bottom: 1.25rem;
 }
 .instagram a:hover {
     transform: scale(1.1);
@@ -125,7 +128,9 @@ input,textarea {
 }
 .grid-container ul {
     list-style: none;
-    padding: 0;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 1.875rem;
 }
 .grid-container li {
     display: grid;
@@ -139,5 +144,41 @@ input,textarea {
     color: #000000;
 }
 .grid-container li strong:hover {
+    color: #C97064;
+}
+@media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .section-class {
+    padding: 1rem;
+    font-size: 1rem;
+    }
+}
+section {
+    margin-bottom: 2rem;
+}
+.redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    align-items: center;
+}
+.redes img {
+
+    width: 3.75rem;
+    height: auto;
+}
+.redes a {
+    text-decoration: none;
+    color: #522A27;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+.redes a:hover {
+    transform: scale(1.1);
     color: #C97064;
 }
