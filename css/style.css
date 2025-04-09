@@ -1,0 +1,143 @@
+@font-face {
+    font-family: montserrat;
+    src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: 400;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.25rem;
+    justify-items: center;
+    text-align: center;
+}
+p{
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.25rem;
+}
+h2{
+    display: flex;
+    justify-content: center;
+padding: 1.25rem;
+}
+.carousel-container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.carousel-inner img {
+    max-height: 21.875rem;
+    object-fit: cover;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .9375rem;
+    padding: 1.25rem;
+}
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    align-items: center;
+}
+.footer-images img {
+    width: 3.75rem;
+    height: auto;
+}
+footer a {
+    text-decoration: none;
+    color: #522A27;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+footer a:hover {
+    transform: scale(1.1);
+    color: #C97064;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem 1.25rem;
+}
+.form-container {
+    background: white;
+    padding: 1.25rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .625rem;
+    width: 100%;
+    max-width: 25rem;
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: .625rem;
+}
+label {
+    margin-top: .625rem;
+}
+input,textarea {
+    width: 100%;
+    padding: .625rem;
+    border: .0625rem solid #ccc;
+    border-radius: .25rem;
+    resize: vertical;
+}
+.send {
+    width: 100%;
+    padding: .625rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.send:hover {
+    background-color: #218838;
+}
+.contactame {
+    color: rgb(94, 87, 87);
+    font-size: .75rem;
+    padding-top: .625rem;
+    text-align: center;
+}
+.instagram a{
+    text-decoration: none;
+    color: #522A27;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.25rem;
+}
+.instagram a:hover {
+    transform: scale(1.1);
+    color: #C97064;
+}
+.grid-container ul {
+    list-style: none;
+    padding: 0;
+}
+.grid-container li {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: .3125rem;
+    margin-bottom: .9375rem;
+}
+.grid-container li strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+.grid-container li strong:hover {
+    color: #C97064;
+}
